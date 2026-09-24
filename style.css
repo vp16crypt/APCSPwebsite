@@ -3,142 +3,171 @@ body {
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     margin-bottom: 0;
-    border-radius: 0;
 }
 
-
-.navbar-nav li a {
-    display: inline-block !important; 
-    transition: transform 0.2s ease !important; 
+.navbar-nav a:hover {
+    background-color: #286090 !important;
 }
-
-
-.navbar-nav li a:hover {
-    background-color: #286090; 
-}
-    
-
-
-
 
 .parallax {
-    height: 900px;
-    background-image: url("https://plus.unsplash.com/premium_photo-1664300792059-863ccfe55932?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9yZXN0fGVufDB8fDB8fHww");
+    height: 600px;
+    background-image: url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2000&q=80");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     text-align: center;
+    padding-top: 200px;
     color: white;
-    padding-top: 220px;
+}
+
+.second-image {
+    background-image: url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2000&q=80");
+}
+
+.third-image {
+    background-image: url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2000&q=80");
 }
 
 .welcome {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 25px;
-    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     width: 80%;
+    margin: auto;
 }
 
-
-
-
-.welcome h1 {
-    font-size: 45px;
-}
-
-.welcome p {
-    font-size: 20px;
-}
-
-.home-section {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.home-section h2 {
-    font-size: 32px;
-}
-
-.home-section p {
-    max-width: 700px;
-    margin: 20px auto;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.bio-section {
-    padding: 80px 20px;
+.home-section,
+.bio-section,
+.projects-section {
+    padding: 50px 20px;
     text-align: center;
 }
 
-.bio-section h1 {
-    font-size: 40px;
+.avatar {
+    width: 150px;
+    border-radius: 50%;
 }
 
-.bio-section p {
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.interest-image {
+.interest {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
 }
 
-.project-page {
-    text-align: center;
-    padding: 80px 20px;
-    min-height: 600px;
+.project-links {
+    margin: 30px;
+}
+
+.project-links a {
+    background: #286090;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.project {
+    padding: 50px 10px;
+    border-top: 1px solid #ddd;
 }
 
 .coming-soon {
-    width: 400px;
+    width: 300px;
     max-width: 100%;
-    margin: 20px;
 }
 
 footer {
-    background-color: #222;
-    color: #aaa;
-    padding: 30px 0 20px;
-}
-
-footer h4 {
+    background: #222;
     color: white;
+    padding: 30px;
+    text-align: center;
 }
 
 footer a {
+    color: white;
     display: block;
-    color: #aaa;
-    margin: 7px 0;
+    margin: 5px;
 }
 
-footer a:hover {
+.mode-button {
+    padding: 10px;
+    margin: 15px;
+}
+
+.dark-mode {
+    background: #222;
     color: white;
 }
 
-footer hr {
-    border-color: #444;
+.dark-mode .home-section,
+.dark-mode .bio-section,
+.dark-mode .projects-section {
+    background: #222;
+}
+
+.dark-mode .project {
+    border-color: #555;
+}
+
+.button {
+    color: white;
+    background-color: #222;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+.button svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.75rem;
+}
+
+.button:focus svg {
+    animation: spin_357 0.5s linear;
+}
+
+@keyframes spin_357 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.credit {
+    font-size: 12px;
 }
 
 @media (max-width: 767px) {
     .parallax {
-        height: 700px;
         background-attachment: scroll;
+        height: 450px;
+        padding-top: 150px;
     }
 
-    .welcome h1 {
-        font-size: 32px;
+    .welcome {
+        width: 90%;
     }
 
-    .welcome p {
-        font-size: 17px;
-    }
-
-    .bio-section {
-        padding: 70px 20px 40px;
+    .interest {
+        margin-top: 15px;
     }
 }
